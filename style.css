@@ -1,0 +1,247 @@
+:root {
+  /* Paleta — Opción A: Boutique de día */
+  --bg: #f5ede4; /* marfil — fondo principal */
+  --ink: #2b211d; /* espresso — texto principal */
+  --ink-soft: #6b5c53; /* espresso suave — texto secundario */
+  --acento: #8c2f39; /* vino — color firma */
+  --dorado: #b8935b; /* champán — detalles, nunca fondos grandes */
+  --apoyo: #d6bbac; /* piedra rosa — fondos secundarios, bordes */
+
+  --serif: "Fraunces", serif;
+  --sans: "Poppins", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--ink);
+  background: var(--bg);
+  overflow-x: hidden;
+}
+
+h1,
+h2 {
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: clamp(1.6rem, 6vw, 2.4rem);
+  line-height: 1.2;
+  margin-left: 3px;
+  color: var(--ink);
+}
+
+p {
+  margin-left: 4px;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+.name {
+  text-align: center;
+  padding: 1.5rem 1.5rem 0;
+}
+
+.hero {
+  text-align: center;
+  padding: 1.5rem;
+  background-color: var(--apoyo);
+  margin-top: 10px;
+  border-radius: 12px;
+}
+
+.eyebrow {
+  font-size: 0.85rem;
+  color: var(--acento);
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+}
+
+.eyebrow.center {
+  text-align: center;
+}
+
+.subtitle {
+  margin-top: 0.5rem;
+  color: var(--ink-soft);
+  margin-bottom: 0.5rem;
+}
+
+.hero-image {
+  width: 100%;
+  max-width: 420px;
+  justify-content: center;
+  display: flex;
+  margin: 0 auto;
+}
+
+.hero-image img {
+  width: 90%;
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(43, 33, 29, 0.15);
+}
+
+.servicios {
+  padding: 2rem 1.5rem;
+  text-align: center;
+}
+
+.product {
+  width: 100%;
+  text-align: center;
+}
+
+.product .servicio-item {
+  margin-bottom: 1.25rem;
+  padding: 0.5rem;
+}
+
+.product .servicio-item img {
+  height: 48px;
+  margin-bottom: 0.5rem;
+}
+
+.galeria {
+  background-color: var(--apoyo);
+  border-radius: 12px;
+  padding: 3.5rem 1.5rem;
+  margin: 1rem auto;
+}
+
+.galeria h2 {
+  color: var(--acento);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+  width: 100%;
+}
+
+.gallery > div {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(43, 33, 29, 0.15);
+}
+
+.gallery img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.gallery img:active {
+  transform: scale(1.1);
+}
+
+.pricing {
+  position: relative;
+  background: url(./resources/lefthand.jpeg) center / cover no-repeat;
+  border-radius: 12px;
+  padding: 2.5rem 1.5rem;
+  margin: 1rem auto;
+  overflow: hidden;
+}
+
+.pricing::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(245, 237, 228, 0.9);
+  z-index: 0;
+}
+
+.pricing > * {
+  position: relative;
+  z-index: 1;
+}
+
+.pricing h2 {
+  font-size: 1.9rem;
+  margin-bottom: 2rem;
+}
+
+.center {
+  text-align: center;
+}
+
+.pricing-grid {
+  display: flex;
+  flex-direction: column;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.price-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  border-bottom: 1px dashed var(--dorado);
+  padding: 0.9rem 0;
+}
+
+.price-name {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--ink);
+}
+
+.price-value {
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: var(--acento);
+  white-space: nowrap;
+}
+
+.cta {
+  background-color: var(--acento);
+  padding: 3.5rem 1.5rem;
+  text-align: center;
+  border-radius: 12px;
+  margin: 1rem auto;
+}
+
+.cta-text p {
+  font-size: 0.95rem;
+  color: var(--bg);
+  margin-bottom: 1.25rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.85rem 2rem;
+  border-radius: 999px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.btn-dark {
+  background-color: var(--ink);
+  color: var(--bg);
+}
+
+.footer {
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 0.8rem;
+  background-color: var(--ink);
+  color: var(--bg);
+}
